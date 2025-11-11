@@ -88,32 +88,7 @@ header {
   margin: 10px 0 20px;
 }
 
-.portfolio-btn {
-  display: inline-block;
-  border: 2px solid white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
 
-.portfolio-btn:hover {
-   padding: 13px 26px;
-}
-
-.portfolio-btn small {
-  display: block;
-  font-size: 0.8em;
-  color: #00aaff;
-  margin-top: 5px;
-  text-align: center;
-}
-
-.portfolio-btn small:hover{
-     color: aquamarine;
-}
 
 /* CONTACT INFO */
 .contact-info {
@@ -216,3 +191,4 @@ header {
     font-size: 0.9em;
   }
 }
+
