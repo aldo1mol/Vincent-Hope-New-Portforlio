@@ -1,0 +1,218 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('img/home.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* NAVIGATION */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 60px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: end;
+}
+
+.logo {
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-text h1 {
+  font-size: 3.5em;
+  line-height: 1.2em;
+  margin-left: -5px;
+}
+
+.hero-text .highlight {
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin: 10px 0 20px;
+}
+
+.portfolio-btn {
+  display: inline-block;
+  border: 2px solid white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.portfolio-btn:hover {
+   padding: 13px 26px;
+}
+
+.portfolio-btn small {
+  display: block;
+  font-size: 0.8em;
+  color: #00aaff;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.portfolio-btn small:hover{
+     color: aquamarine;
+}
+
+/* CONTACT INFO */
+.contact-info {
+  margin-top: 150px;
+  padding: 0 0 40px 80px;
+  font-size: 0.95em;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.contact-info i {
+  color: #00aaff;
+  margin-right: 10px;
+    font-size: 25px;
+
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .hero-text h1 {
+    font-size: 2.8em;
+  }
+  .hero {
+    padding-left: 40px;
+  }
+  .contact-info {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+
+  .hero-text h1{
+    margin-left: -2px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    display: none;
+    border-radius: 3px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+
+  .hero {
+    padding: 120px 20px 20px;
+    align-items: flex-start;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2em;
+  }
+
+  .portfolio-btn {
+    padding: 10px 20px;
+  }
+
+  .contact-info {
+    padding: 20px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .portfolio-btn {
+    font-size: 0.9em;
+  }
+}
